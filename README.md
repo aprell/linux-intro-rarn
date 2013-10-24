@@ -98,15 +98,17 @@ _Shell = Kommandozeileninterpreter_
 Um alle Befehle aus unserem Beispiel "auf einmal" auszuführen, erstellen wir
 eine Datei `newbook.sh` mit folgendem Inhalt:
 
-	mkdir Buch
-	cd Buch
-	mkdir Kapitel1 Kapitel1/Abbildungen Kapitel2 Kapitel3
-	cd Kapitel1
-	cp ~/Downloads/tux.png Abbildungen
-	echo "## Einleitung" > 01_Einleitung.txt
-	cd ..
-	cp ~/Downloads/*.tif .
-	echo "# Titel" > Inhalt.txt
+```shell
+mkdir Buch
+cd Buch
+mkdir Kapitel1 Kapitel1/Abbildungen Kapitel2 Kapitel3
+cd Kapitel1
+cp ~/Downloads/tux.png Abbildungen
+echo "## Einleitung" > 01_Einleitung.txt
+cd ..
+cp ~/Downloads/*.tif .
+echo "# Titel" > Inhalt.txt
+```
 
 Können wir die Datei nun als Programm ausführen? Noch nicht...
 
