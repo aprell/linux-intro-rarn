@@ -68,6 +68,14 @@ Noch nicht besonders viel. Es kann losgehen:
 	oder in einem Rutsch erstellen.
 
 3. `mkdir Kapitel1 Kapitel1/Abbildungen Kapitel2 Kapitel3`
+
+	Tipp: Wenn man wie oben ein Verzeichnis und Unterverzeichnis erstellen will
+	kann man sich mit der Option `-p` ein paar Buchstaben sparen. `-p` steht
+	für *Parent* und erstellt, wenn nötig, gleich das erste Verzeichnis mit.
+	Das Kommando würde dann so aussehen:
+
+	`mkdir -p Kapitel1/Abbildungen Kapitel2 Kapitel3`
+
 4. `cd Kapitel1`
 
 	Jetzt befinden wir uns in `Kapitel1`, einem Unterverzeichnis von `Buch`.
@@ -124,7 +132,7 @@ Et voilà! Mit `mv` verschieben wir `newbook.sh` nach `bin` und mit `cd` ohne
 Pfadangabe wechseln wir direkt ins Home-Verzeichnis.
 
 `mv newbook.sh ~/bin` (move)  
-`cd` 
+`cd`
 
  Zum Test löschen wir unser oben angelegtes `Buch`. Bereit? Dann los:
 
@@ -143,7 +151,7 @@ aktuellen Verzeichnis einschließlich aller Unterverzeichnisse.
 stehenden arithmetischen Ausdrucks (`bc` ist ein Taschenrechner).
 
 `history | tr -s " " | cut -d" " -f3 | sort | uniq -c | sort -nr | head` zeigt
-die "Top 10" der am häufigsten benutzten Kommandos. 
+die "Top 10" der am häufigsten benutzten Kommandos.  
 
 Das letzte Beispiel lässt erahnen, der Fantasie sind nahezu keine Grenzen
 gesetzt.
