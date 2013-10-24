@@ -1,4 +1,4 @@
-# Kurze Einführung in die Benutzung von Linux
+# Einführung in die Benutzung von Linux
 
 Im Rahmen der Vorlesung _Rechnerarchitektur und Rechnernetze_ am
 Lehrstuhl für Angewandte Informatik II  
@@ -12,10 +12,8 @@ Wintersemester 2013/14
   Endanwender (Distribution)
 - Es gibt zahllose Distributionen, zu viele, um sie alle aufzuzählen
 - Aktuelle Spitzenplätze auf [distrowatch.com](http://distrowatch.com)
-  (Oktober 2013):
-    1. [Mint](http://www.linuxmint.com)
-    2. [Debian](http://www.debian.org/)
-    3. [Ubuntu](http://www.ubuntu.com/)
+  (Oktober 2013): 1. [Mint](http://www.linuxmint.com), 2.
+  [Debian](http://www.debian.org/), 3. [Ubuntu](http://www.ubuntu.com/)
 - Weitere bekannte Distributionen: [Fedora](http://fedoraproject.org),
   [openSUSE](http://de.opensuse.org), [Mageia](http://www.mageia.org),
   [Gentoo](http://www.gentoo.org), ...
