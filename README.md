@@ -1,8 +1,8 @@
 # Einführung in die Benutzung von Linux
 
 Im Rahmen der Vorlesung _Rechnerarchitektur und Rechnernetze_ am
-Lehrstuhl für Angewandte Informatik II
-Universität Bayreuth
+Lehrstuhl für Angewandte Informatik II  
+Universität Bayreuth  
 Wintersemester 2013/14
 
 ## Linux?
@@ -125,13 +125,13 @@ Können wir die Datei nun als Programm ausführen? Noch nicht...
 Die Datei `newbook.sh` kann zwar gelesen und verändert, aber nicht ausgeführt
 werden. Das müssen wir ändern.
 
-`chmod +x newbook.sh` (change mode)
+`chmod +x newbook.sh` (change mode)  
 `ls -l`
 
 Et voilà! Mit `mv` verschieben wir `newbook.sh` nach `bin` und mit `cd` ohne
 Pfadangabe wechseln wir direkt ins Home-Verzeichnis.
 
-`mv newbook.sh ~/bin` (move)
+`mv newbook.sh ~/bin` (move)  
 `cd`
 
  Zum Test löschen wir unser oben angelegtes `Buch`. Bereit? Dann los:
@@ -151,7 +151,7 @@ aktuellen Verzeichnis einschließlich aller Unterverzeichnisse.
 stehenden arithmetischen Ausdrucks (`bc` ist ein Taschenrechner).
 
 `history | tr -s " " | cut -d" " -f3 | sort | uniq -c | sort -nr | head` zeigt
-die "Top 10" der am häufigsten benutzten Kommandos.
+die "Top 10" der am häufigsten benutzten Kommandos.  
 
 Das letzte Beispiel lässt erahnen, der Fantasie sind nahezu keine Grenzen
 gesetzt.
