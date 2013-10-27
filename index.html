@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Linux-Einführung by aprell</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Linux-Einführung</h1>
+          <h2></h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/aprell/linux-intro-rarn/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/aprell/linux-intro-rarn/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/aprell/linux-intro-rarn" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p>Einführung in die Benutzung von Linux im Rahmen der Vorlesung <em>Rechnerarchitektur und Rechnernetze</em> am
+Lehrstuhl für Angewandte Informatik II<br>
+Universität Bayreuth<br>
+Wintersemester 2013/14</p>
+
+<h2>
+<a name="linux" class="anchor" href="#linux"><span class="octicon octicon-link"></span></a>Linux?</h2>
+
+<ul>
+<li>Linux bezeichnet eigentlich nur den Betriebssystem-Kernel</li>
+<li>Kernel + System- und Anwenderprogramme = vollständiges Betriebssystem für
+Endanwender (Distribution)</li>
+<li>Es gibt zahllose Distributionen, zu viele, um sie alle aufzuzählen</li>
+<li>Aktuelle Spitzenplätze auf <a href="http://distrowatch.com">distrowatch.com</a>
+(Oktober 2013): 1. <a href="http://www.linuxmint.com">Mint</a>, 2.
+<a href="http://www.debian.org/">Debian</a>, 3. <a href="http://www.ubuntu.com/">Ubuntu</a>
+</li>
+<li>Weitere bekannte Distributionen: <a href="http://fedoraproject.org">Fedora</a>,
+<a href="http://de.opensuse.org">openSUSE</a>, <a href="http://www.mageia.org">Mageia</a>,
+<a href="http://www.gentoo.org">Gentoo</a>, ...</li>
+<li>Linux ist weit verbreitet, vor allem auf Servern, Supercomputern, in
+eingebetteten Systemen, auf Smartphones und auf Tablets (Android)</li>
+<li>Desktop-Umgebungen wie <a href="http://www.kde.org">KDE</a>,
+<a href="http://www.gnome.org">GNOME</a>, <a href="http://www.xfce.org">Xfce</a> oder
+<a href="http://lxde.org">LXDE</a> bieten grafische Benutzeroberflächen und erleichtern
+den Einstieg</li>
+</ul><h2>
+<a name="home-sweet-home" class="anchor" href="#home-sweet-home"><span class="octicon octicon-link"></span></a>$HOME sweet $HOME</h2>
+
+<ul>
+<li>Linux ist ein Mehrbenutzer-Betriebssystem</li>
+<li>Jeder Benutzer hat ein eigenes Arbeitsverzeichnis (Home-Verzeichnis)</li>
+<li>Dateien und Verzeichnisse außerhalb des eigenen Home-Verzeichnisses können
+nur mit entsprechenden Rechten zugegriffen werden</li>
+</ul><h3>
+<a name="beispiel" class="anchor" href="#beispiel"><span class="octicon octicon-link"></span></a>Beispiel</h3>
+
+<p><em>Anlegen und Löschen von Ordnern und Dateien in der aktuellen
+Desktop-Umgebung</em></p>
+
+<p><img src="https://raw.github.com/aprell/linux-intro-rarn/master/mc.png" alt="" title="Verzeichnisse und Unterverzeichnisse"></p>
+
+<h2>
+<a name="die-kommandozeile" class="anchor" href="#die-kommandozeile"><span class="octicon octicon-link"></span></a>Die Kommandozeile</h2>
+
+<ul>
+<li>Die Kommandozeile bietet Zugriff auf grafische und nichtgrafische Tools
+und Anwendungen; man gibt Befehle ein und bestätigt mit der Eingabetaste</li>
+<li>
+<code>man xyz</code> (manual) liefert Hilfe zu einem bestimmten Befehl <code>xyz</code>
+</li>
+<li>Alles, was folgt, funktioniert auch auf Macs, da OS X und Linux ein
+gemeinsames Vorbild haben: <a href="http://de.wikipedia.org/wiki/Unix">Unix</a>
+</li>
+</ul><h3>
+<a name="beispiel-1" class="anchor" href="#beispiel-1"><span class="octicon octicon-link"></span></a>Beispiel</h3>
+
+<p><em>Anlegen und Löschen von Ordnern und Dateien in der Kommandozeile</em></p>
+
+<p>Wo befinden wir uns?</p>
+
+<p><code>pwd</code> (print working directory)</p>
+
+<p>Wir befinden uns in unserem Home-Verzeichnis. Was gibt es hier?</p>
+
+<p><code>ls</code> (list contents)</p>
+
+<p>Noch nicht besonders viel. Es kann losgehen:</p>
+
+<ol>
+<li>
+<code>mkdir Buch</code> (make directory)</li>
+<li>
+<p><code>cd Buch</code> (change directory)</p>
+
+<p>Wir befinden uns jetzt im Verzeichnis <code>Buch</code>, das wir soeben angelegt
+haben.  Die restlichen fehlenden Verzeichnisse können wir der Reihe nach
+oder in einem Rutsch erstellen.</p>
+</li>
+<li>
+<p><code>mkdir Kapitel1 Kapitel1/Abbildungen Kapitel2 Kapitel3</code></p>
+
+<p>Tipp: Wenn man wie oben ein Verzeichnis und Unterverzeichnis erstellen will,
+kann man sich mit der Option <code>-p</code> ein paar Buchstaben sparen. <code>-p</code> steht
+für <em>Parent</em> und erstellt, wenn nötig, gleich das erste Verzeichnis mit.
+Das Kommando würde dann so aussehen:</p>
+
+<p><code>mkdir -p Kapitel1/Abbildungen Kapitel2 Kapitel3</code></p>
+</li>
+<li>
+<p><code>cd Kapitel1</code></p>
+
+<p>Jetzt befinden wir uns in <code>Kapitel1</code>, einem Unterverzeichnis von <code>Buch</code>.
+Tilde (<code>~</code>) bezeichnet unser Home-Verzeichnis (Neugierige probieren <code>echo
+~</code>). Wir kopieren die Datei <code>tux.png</code> von <code>Downloads</code> nach <code>Abbildungen</code>.
+Mit <code>echo</code> erzeugen wir die Datei <code>01_Einleitung.txt</code> und fügen eine erste
+Zeile Text ein.  Da wir uns in <code>Buch/Kapitel1</code> befinden, bringt uns <code>cd
+..</code> in das übergeordnete Verzeichnis <code>Buch</code> zurück.</p>
+</li>
+<li><p><code>cp ~/Downloads/tux.png Abbildungen</code> (copy)</p></li>
+<li><p><code>echo "## Einleitung" &gt; 01_Einleitung.txt</code></p></li>
+<li>
+<p><code>cd ..</code></p>
+
+<p>Wir kopieren nun alle Bilder mit der Endung <code>tif</code> von <code>Downloads</code> ins
+aktuelle Verzeichnis (<code>Buch</code>). Mit <code>echo</code> erzeugen wir analog zu 6. die
+Datei <code>Inhalt.txt</code>. Fertig!</p>
+</li>
+<li><p><code>cp ~/Downloads/*.tif .</code></p></li>
+<li><p><code>echo "# Titel" &gt; Inhalt.txt</code></p></li>
+</ol><p>Das war recht mühsam. Schön wäre es, wenn man diesen Vorgang automatisieren
+könnte...</p>
+
+<h3>
+<a name="ein-einfaches-shell-skript" class="anchor" href="#ein-einfaches-shell-skript"><span class="octicon octicon-link"></span></a>Ein einfaches Shell-Skript</h3>
+
+<p><em>Shell = Kommandozeileninterpreter</em></p>
+
+<p>Um alle Befehle aus unserem Beispiel "auf einmal" auszuführen, erstellen wir
+eine Datei <code>newbook.sh</code> mit folgendem Inhalt:</p>
+
+<pre lang="shell"><code>mkdir Buch
+cd Buch
+mkdir Kapitel1 Kapitel1/Abbildungen Kapitel2 Kapitel3
+cd Kapitel1
+cp ~/Downloads/tux.png Abbildungen
+echo "## Einleitung" &gt; 01_Einleitung.txt
+cd ..
+cp ~/Downloads/*.tif .
+echo "# Titel" &gt; Inhalt.txt
+</code></pre>
+
+<p>Können wir die Datei nun als Programm ausführen? Noch nicht...</p>
+
+<p><code>ls -l</code></p>
+
+<p>Die Datei <code>newbook.sh</code> kann zwar gelesen und verändert, aber nicht ausgeführt
+werden. Das müssen wir ändern.</p>
+
+<p><code>chmod +x newbook.sh</code> (change mode)<br><code>ls -l</code></p>
+
+<p>Et voilà! Mit <code>mv</code> verschieben wir <code>newbook.sh</code> nach <code>bin</code> und mit <code>cd</code> ohne
+Pfadangabe wechseln wir direkt ins Home-Verzeichnis.</p>
+
+<p><code>mv newbook.sh ~/bin</code> (move)<br><code>cd</code></p>
+
+<p>Zum Test löschen wir unser oben angelegtes <code>Buch</code>. Bereit? Dann los:</p>
+
+<p><code>newbook.sh</code></p>
+
+<h3>
+<a name="zum-schluss" class="anchor" href="#zum-schluss"><span class="octicon octicon-link"></span></a>Zum Schluss</h3>
+
+<p>Kommandos lassen sich verketten: <code>a | b</code> bedeutet, die Ausgabe bzw. das
+Ergebnis von <code>a</code> wird als Eingabe von <code>b</code> verwendet. Extrem nützlich! Drei
+kurze Beispiele:</p>
+
+<p><code>find -name '*.txt' | wc -l</code> ermittelt die Anzahl der Textdateien im
+aktuellen Verzeichnis einschließlich aller Unterverzeichnisse.</p>
+
+<p><code>echo "4/3 * 3.14159 * 2.25^3" | bc</code> bestimmt den Wert des in Klammern
+stehenden arithmetischen Ausdrucks (<code>bc</code> ist ein Taschenrechner).</p>
+
+<p><code>history | tr -s " " | cut -d" " -f3 | sort | uniq -c | sort -nr | head</code> zeigt
+die "Top 10" der am häufigsten benutzten Kommandos.  </p>
+
+<p>Das letzte Beispiel lässt erahnen, der Fantasie sind nahezu keine Grenzen
+gesetzt.</p>
+        </section>
+
+        <footer>
+          Linux-Einführung is maintained by <a href="https://github.com/aprell">aprell</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
