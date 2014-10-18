@@ -3,7 +3,7 @@
 Im Rahmen der Vorlesung _Rechnerarchitektur und Rechnernetze_ am
 Lehrstuhl für Angewandte Informatik II  
 Universität Bayreuth  
-Wintersemester 2013/14
+Wintersemester 2014/15
 
 ## Linux?
 
@@ -12,8 +12,8 @@ Wintersemester 2013/14
   Endanwender (Distribution)
 - Es gibt zahllose Distributionen, zu viele, um sie alle aufzuzählen
 - Aktuelle Spitzenplätze auf [distrowatch.com](http://distrowatch.com)
-  (Oktober 2013): 1. [Mint](http://www.linuxmint.com), 2.
-  [Debian](http://www.debian.org/), 3. [Ubuntu](http://www.ubuntu.com/)
+  (Oktober 2014): 1. [Mint](http://www.linuxmint.com), 2.
+  [Ubuntu](http://www.ubuntu.com/), 3. [Debian](http://www.debian.org/)
 - Weitere bekannte Distributionen: [Fedora](http://fedoraproject.org),
   [openSUSE](http://de.opensuse.org), [Mageia](http://www.mageia.org),
   [Gentoo](http://www.gentoo.org), ...
