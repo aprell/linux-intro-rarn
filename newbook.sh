@@ -1,9 +1,10 @@
 mkdir Buch
 cd Buch
-mkdir Kapitel1 Kapitel1/Abbildungen Kapitel2 Kapitel3
+mkdir -p Kapitel1/Abbildungen Kapitel2 Kapitel3
 cd Kapitel1
-cp ~/Downloads/tux.png Abbildungen
-echo "## Einleitung" > 01_Einleitung.txt
+curl -s -o ~/Downloads/Tux.png http://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png
+cp ~/Downloads/Tux.png Abbildungen
+echo "Einleitung" > Einleitung.txt
 cd ..
-cp ~/Downloads/*.tif .
-echo "# Titel" > Inhalt.txt
+echo "Titel" > Inhalt.txt
+echo "Neues Buch angelegt"

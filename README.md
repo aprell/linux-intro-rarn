@@ -64,15 +64,14 @@ Noch nicht besonders viel. Es kann losgehen:
 2. `cd Buch` (change directory)
 
 	Wir befinden uns jetzt im Verzeichnis `Buch`, das wir soeben angelegt
-	haben.  Die restlichen fehlenden Verzeichnisse können wir der Reihe nach
+	haben. Die restlichen fehlenden Verzeichnisse können wir der Reihe nach
 	oder in einem Rutsch erstellen.
 
-3. `mkdir Kapitel1 Kapitel1/Abbildungen Kapitel2 Kapitel3`
+3. `mkdir Kapitel1 Kapitel2 Kapitel3`  
+   `mkdir Kapitel1/Abbildungen`
 
-	Tipp: Wenn man wie oben ein Verzeichnis und Unterverzeichnis erstellen will
-	kann man sich mit der Option `-p` ein paar Buchstaben sparen. `-p` steht
-	für *Parent* und erstellt, wenn nötig, gleich das erste Verzeichnis mit.
-	Das Kommando würde dann so aussehen:
+	Tipp: Mit der Option `-p` (parent) geht das Erstellen einer
+	Verzeichnisstruktur am schnellsten:
 
 	`mkdir -p Kapitel1/Abbildungen Kapitel2 Kapitel3`
 
@@ -80,21 +79,21 @@ Noch nicht besonders viel. Es kann losgehen:
 
 	Jetzt befinden wir uns in `Kapitel1`, einem Unterverzeichnis von `Buch`.
 	Tilde (`~`) bezeichnet unser Home-Verzeichnis (Neugierige probieren `echo
-	~`). Wir kopieren die Datei `tux.png` von `Downloads` nach `Abbildungen`.
-	Mit `echo` erzeugen wir die Datei `01_Einleitung.txt` und fügen eine erste
-	Zeile Text ein.  Da wir uns in `Buch/Kapitel1` befinden, bringt uns `cd
-	..` in das übergeordnete Verzeichnis `Buch` zurück.
+	~`). Wir downloaden die Datei `Tux.png` und kopieren diese anschließend
+	von `Downloads` nach `Abbildungen`.  Mit `echo` erzeugen wir die Datei
+	`Einleitung.txt` und fügen eine erste Zeile Text ein. Da wir uns in
+	`Buch/Kapitel1` befinden, bringt uns `cd ..` in das übergeordnete
+	Verzeichnis `Buch` zurück.
 
-5. `cp ~/Downloads/tux.png Abbildungen` (copy)
-6. `echo "## Einleitung" > 01_Einleitung.txt`
-7. `cd ..`
+5. `curl -s -o ~/Downloads/Tux.png http://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png`
+6. `cp ~/Downloads/Tux.png Abbildungen` (copy)
+7. `echo "Einleitung" > Einleitung.txt`
+8. `cd ..`
 
-	Wir kopieren nun alle Bilder mit der Endung `tif` von `Downloads` ins
-	aktuelle Verzeichnis (`Buch`). Mit `echo` erzeugen wir analog zu 6. die
+	Wieder im Verzeichnis `Buch` erzeugen wir mit `echo` analog zu 6. die
 	Datei `Inhalt.txt`. Fertig!
 
-8. `cp ~/Downloads/*.tif .`
-9. `echo "# Titel" > Inhalt.txt`
+9. `echo "Titel" > Inhalt.txt`
 
 Das war recht mühsam. Schön wäre es, wenn man diesen Vorgang automatisieren
 könnte...
@@ -109,13 +108,14 @@ eine Datei `newbook.sh` mit folgendem Inhalt:
 ```shell
 mkdir Buch
 cd Buch
-mkdir Kapitel1 Kapitel1/Abbildungen Kapitel2 Kapitel3
+mkdir -p Kapitel1/Abbildungen Kapitel2 Kapitel3
 cd Kapitel1
-cp ~/Downloads/tux.png Abbildungen
-echo "## Einleitung" > 01_Einleitung.txt
+curl -s -o ~/Downloads/Tux.png http://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png
+cp ~/Downloads/Tux.png Abbildungen
+echo "Einleitung" > Einleitung.txt
 cd ..
-cp ~/Downloads/*.tif .
-echo "# Titel" > Inhalt.txt
+echo "Titel" > Inhalt.txt
+echo "Neues Buch angelegt"
 ```
 
 Können wir die Datei nun als Programm ausführen? Noch nicht...
@@ -125,7 +125,7 @@ Können wir die Datei nun als Programm ausführen? Noch nicht...
 Die Datei `newbook.sh` kann zwar gelesen und verändert, aber nicht ausgeführt
 werden. Das müssen wir ändern.
 
-`chmod +x newbook.sh` (change mode)  
+`chmod u+x newbook.sh` (change mode)  
 `ls -l`
 
 Et voilà! Mit `mv` verschieben wir `newbook.sh` nach `bin` und mit `cd` ohne
