@@ -36,8 +36,6 @@ Wintersemester 2014/15
 _Anlegen und Löschen von Ordnern und Dateien in der aktuellen
 Desktop-Umgebung_
 
-![](mc.png "Verzeichnisse und Unterverzeichnisse")
-
 ## Die Kommandozeile
 
 - Die Kommandozeile bietet Zugriff auf grafische und nichtgrafische Tools
