@@ -18,8 +18,8 @@ sich als besonders nützlich im Umgang mit Quelltexten. Wir setzen den Haken bei
 `Ansicht > Zeilennummern anzeigen` und vergewissern uns, dass `Extras >
 Hervorhebung > Quelltexte > C` aktiv ist. Unter `Einstellungen > Editor
 einrichten ...` können wir Änderungen permanent beibehalten. Ein weiteres
-Hilfsmittel ist zum Beispiel das Auto-Klammern, zu finden unter `Einstellungen
-> Editor einrichten ... > Erweiterungen`.
+Hilfsmittel ist zum Beispiel das Auto-Klammern, zu finden unter
+`Einstellungen > Editor einrichten ... > Erweiterungen`.
 
 Nachdem wir den Editor nach unseren Vorstellungen eingerichtet haben, kann es
 losgehen (nicht vergessen, regelmäßig speichern).
