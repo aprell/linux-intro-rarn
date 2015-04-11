@@ -27,22 +27,22 @@ Wintersemester 2014/15
 ## Anwendungen
 
 ### Webbrowser
-<img src="firefox.png" alt="Firefox" title="Firefox" style="width: 800px"/>
+<img src="images/firefox.png" alt="Firefox" title="Firefox" style="width: 800px"/>
 
 ### Office-Suite
-<img src="calc.png" alt="LibreOffice Calc" title="LibreOffice Calc" style="width: 800px"/>
+<img src="images/calc.png" alt="LibreOffice Calc" title="LibreOffice Calc" style="width: 800px"/>
 
 ### Dateimanager
-<img src="dolphin.png" alt="Dolphin" title="Dolphin" style="width: 800px"/>
+<img src="images/dolphin.png" alt="Dolphin" title="Dolphin" style="width: 800px"/>
 
 ### Dokumentbetrachter
-<img src="okular.png" alt="Okular" title="Okular" style="width: 800px"/>
+<img src="images/okular.png" alt="Okular" title="Okular" style="width: 800px"/>
 
 ### Bildbetrachter
-<img src="gwenview.png" alt="Gwenview" title="Gwenview" style="width: 800px"/>
+<img src="images/gwenview.png" alt="Gwenview" title="Gwenview" style="width: 800px"/>
 
 ### Texteditor
-<img src="kwrite.png" alt="KWrite" title="KWrite" style="width: 800px"/>
+<img src="images/kwrite.png" alt="KWrite" title="KWrite" style="width: 800px"/>
 
 ## $HOME sweet $HOME
 
@@ -58,7 +58,7 @@ Desktop-Umgebung_
 
 ## Die Kommandozeile
 
-<img src="konsole.png" alt="Konsole" title="Konsole" style="width: 600px"/>
+<img src="images/konsole.png" alt="Konsole" title="Konsole" style="width: 600px"/>
 
 - Die Kommandozeile bietet Zugriff auf grafische und nichtgrafische Tools
   und Anwendungen; man gibt Befehle ein und bestätigt mit der Eingabetaste
